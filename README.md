@@ -64,7 +64,7 @@ MPT requires general knowledge of computers, networking and Aki. If you are not 
 
 ### Both
 
-- The latest files MPT files
+- The latest MPT files
 
 ## Hardware Requirements
 
