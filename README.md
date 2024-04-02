@@ -36,7 +36,7 @@
 
 This project is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en).
 
-- You may not share MPT outside of our Discord or Oddba
+- You may only share MPT as long as proper credits are given, it is not used for commercial purposes and you do not modify it
 - You may not monetize your server in terms of payments or donations.
 - You may not host massive public servers, MPT is meant for COOP with your friends.
 - You may not copy and/or replicate the code by MPT, nor may you use its assets that are handcrafted by our developers and artists.
