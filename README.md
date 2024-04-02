@@ -47,17 +47,18 @@ MPT requires general knowledge of computers, networking and Aki. If you are not 
 
 ### Hosting
 
+- Router and ISP that supports either **Port Forwarding** or **UPnP**
+- A router that supports NAT Loopback if hosting internally
 - Port 6969 open for the AKI Server
 - UDP Port open for P2P traffic, default 25565 (if using UPnP this is not required)
 - SPT installed and working, matching the version of MPT you are going to use
-- Router and ISP that supports either **Port Forwarding** or **UPnP**
 - Access to your Windows Firewall
 - Internet speed of at least 20 Mbit/s up and down is recommended. Each client averages around 400 kbit/s.
-- A router that supports NAT Loopback if hosting internally
 
 ### Client
 
-- UDP Port open for P2P traffic, default 25565 (if using UPnP this is not required) **NOTE**: This is only required if you will be hosting in-game
+- Router and ISP that supports either **Port Forwarding** or **UPnP** | **NOTE**: This is only required if you will be hosting in-game
+- UDP Port open for P2P traffic, default 25565 (if using UPnP this is not required) | **NOTE**: Same as above
 - SPT installed and working, matching the version of MPT you are going to use
 - Access to your Windows Firewall
 - Internet speed of at least 20 Mbit/s up and down is recommended
