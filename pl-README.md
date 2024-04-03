@@ -100,8 +100,8 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 5. Przejdź do `user\mods\MPTCoop\config` i otwórz `coopConfig.json`,
 6. Zamień wartość `externalIP` na Twój adres IP WAN (lub adres serwera VPN, jeżeli go używasz), który znaleziony został w kroku 4, a następnie zapisz oraz zamknij plik,
 
-   >💡 **Przykład:** sztuczny lokalny adres IP (WAN; **70.50.130.200**):
-   > ```json
+    >💡 **Przykład:** sztuczny lokalny adres IP (WAN; **70.50.130.200**):
+    > ```json
     > {
     >     "protocol": "http",
     >     "externalIP": "70.50.130.200"
