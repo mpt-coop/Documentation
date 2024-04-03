@@ -73,7 +73,7 @@ MPT wymaga ogólnej wiedzy o komputerach, sieciach oraz Aki. Jeżeli nie czujesz
 Poniżej podane są rekomendowane wymagania sprzętowe dla płynnej rozgrywki:
 
 - **Procesor**: i7 8700k / Ryzen 7 2700x
-- **Karta Graficzna**: GTX 1060 / RX 580
+- **Karta graficzna**: GTX 1060 / RX 580
 - **Pamięć RAM**: minimalnie 16 GB, jednak zalecaną ilością jest 32 GB
 - **Dysk**: co najmniej dysk SSD — wsparcie nie zostanie udzielone w przypadku próby uruchamiania MPT na dysku HDD
 
@@ -108,12 +108,12 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
     > }
     > ```
 7. Znajdź, jaki jest Twój lokalny adres IP (LAN). Otwórz `Wiersz poleceń` (Naciśnij start i wyszukaj `cmd` lub `Wiersz polecenia` i naciśnij klawisz Enter),
-
-   Powinno to wyglądać następująco:
-   ![image](https://github.com/mpt-coop/Documentation/assets/20912169/2b089bba-aac2-437e-9a6a-6620a4ba249b)
+   >✅ Poprawne uruchomienie powinno dawać podobny rezultat:
+   > 
+   >![image](https://github.com/mpt-coop/Documentation/assets/20912169/2b089bba-aac2-437e-9a6a-6620a4ba249b)
 
 8. Wewnątrz Wiersza poleceń wpisz `ipconfig` i naciśnij klawisz Enter. Twój lokalny adres IP (LAN) powinien wyświetlać się tak jak poniżej:
-    ```bat
+   ```bat
     Windows IP Configuration
     
     
