@@ -142,7 +142,7 @@ This is what it should look like when successfully starting:
 ![image](https://github.com/mpt-coop/Documentation/assets/20912169/fe46fb2d-4e90-4f54-b159-745a1561772a)
 
 12. Start `Aki.Launcher.exe` and click 'Settings'
-13. In the `URL` field, change it to reflect your WAN IP. Using the example in step 6 it would be: `http://70.50.130.200:6969` (remember to remove any trailing forward slashes `/` as they sometimes incorrectly gets added when copy-pasting)
+13. In the `URL` field, change it to reflect your WAN IP. Using the example in step 6 it would be: `http://70.50.130.200:6969` (remember to remove any trailing forward slashes `/`)
 
 ### Host using a VPN
 
@@ -174,20 +174,22 @@ Example with a fake address (**20.20.56.73**):
 ```
 11. Start the `Aki.Server.exe` and wait for it to finish loading
 12. Start `Aki.Launcher.exe` and click 'Settings'
-13. In the `URL` field, change it to reflect your VPN IP. Using the example in step 5 it would be: `http://20.20.56.73:6969` (remember to remove any trailing forward slashes `/` as they sometimes incorrectly gets added when copy-pasting)
+13. In the `URL` field, change it to reflect your VPN IP. Using the example in step 5 it would be: `http://20.20.56.73:6969` (remember to remove any trailing forward slashes `/`)
 
 ### Client using port forwarding
+
 1. Download the latest MPT build
 2. Navigate to your SPT installation and extract the contents of the archive into the folder
 3. Start `Aki.Launcher.exe` and click 'Settings'
-4. In the `URL` field, change it to reflect the hosts WAN IP. Using the example in "Host using port forwarding" it would be: `http://70.50.130.200:6969` (remember to remove any trailing forward slashes `/` as they sometimes incorrectly gets added when copy-pasting)
+4. In the `URL` field, change it to reflect the hosts WAN IP. Using the example in "Host using port forwarding" it would be: `http://70.50.130.200:6969` (remember to remove any trailing forward slashes `/`)
 5. If hosting in-game, allow all connections (public and private) when prompted by the Windows Firewall
 
 ### Client using a VPN
+
 1. Download the latest MPT build
 2. Navigate to your SPT installation and extract the contents of the archive into the folder
 3. Start `Aki.Launcher.exe` and click 'Settings'
-4. In the `URL` field, change it to reflect the hosts VPN IP. Using the example in step 5 it would be: `http://20.20.56.73:6969` (remember to remove any trailing forward slashes `/` as they sometimes incorrectly gets added when copy-pasting)
+4. In the `URL` field, change it to reflect the hosts VPN IP. Using the example in step 5 it would be: `http://20.20.56.73:6969` (remember to remove any trailing forward slashes `/`)
 5. If hosting in-game, allow all connections (public and private) when prompted by the Windows Firewall
 
 ## Credits
