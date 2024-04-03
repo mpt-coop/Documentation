@@ -58,9 +58,9 @@ MPT wymaga ogólnej wiedzy o komputerach, sieciach oraz Aki. Jeżeli nie czujesz
 ### Klient
 
 - Router oraz dostawca internetu (ISP), który wspiera **Przekierowanie Portów** lub **UPnP**,
-- Otwarty port UDP dla ruchu P2P, domyślnie 25565 (jeżeli zostanie użyte połączenie UPnP — warunek ten nie jest wymagany),
+- Otwarty port UDP dla ruchu P2P, domyślnie **25565** (jeżeli zostanie użyte połączenie UPnP — warunek ten nie jest wymagany),
 > ⚠️ **UWAGA**: Powyższe warunki są wymagane, jeśli planujesz hostować sesje w grze.
-- Zainstalowane oraz działające SPT, odpowiednie dla wybranej wersji **MPT**, która będzie używana,
+- Zainstalowane oraz działające **SPT**, odpowiednie dla wybranej wersji **MPT**, która będzie używana,
 - Dostęp do Zapory sieciowej Windows klienta,
 - Internet o prędkości co najmniej 20 Mbit/s (Prędkość zalecana w obu kierunkach).
 
@@ -77,13 +77,13 @@ Poniżej podane są rekomendowane wymagania sprzętowe dla płynnej rozgrywki:
 - **Pamięć RAM**: minimalnie 16 GB, jednak zalecaną ilością jest 32 GB
 - **Dysk**: co najmniej dysk SSD — wsparcie nie zostanie udzielone w przypadku próby uruchamiania MPT na dysku HDD
 
-Największy wzrost w MPT (oraz w SPT ogółem) dają mocniejszy Procesor oraz Pamięć RAM.
+Największy wzrost w MPT (oraz w SPT ogółem) dają mocniejszy procesor oraz pamięć RAM.
 
 ## Instalacja
 
 ### Host — przy użyciu przekierowania portów
 
-Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie porty podane w **Warunkach Wstępnych** zostały przekierowane. Nie otrzymasz od nas wsparcia przy przekierowaniu portów. Jeżeli nie masz dostępu do routera lub nie masz możliwości przekierowania portów, użyj VPN.
+Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie porty podane w **<a href="#prerequisites">warunkach wstępnych</a>** zostały przekierowane. Nie otrzymasz od nas wsparcia przy przekierowaniu portów. Jeżeli nie masz dostępu do routera lub nie masz możliwości przekierowania portów, użyj VPN.
 
 **Konfiguracja Zapory sieciowej**
 
@@ -182,7 +182,7 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
-4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój publiczny adres IP (WAN). Używając przykładu opisanego w "Host — przy użyciu przekierowania portów" wartością byłoby: `http://70.50.130.200:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
+4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój publiczny adres IP (WAN). Używając przykładu opisanego w **<a href="#host-using-port-forwarding">Host — przy użyciu przekierowania portów</a>** wartością byłoby: `http://70.50.130.200:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
 5. Jeżeli hostujesz sesję w grze, zezwól na wszystkie połączenie (publiczne oraz prywatne), jeżeli Zapora sieciowa Windows wyświetli takie zapytanie.
 
 ### Klient — Przy użyciu VPN
@@ -190,7 +190,7 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
-4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój adres IP serwera VPN. Używając przykładu opisanego w "Host — przy użyciu VPN" wartością byłoby: `http://20.20.56.73:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
+4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój adres IP serwera VPN. Używając przykładu opisanego w **<a href="#host-using-a-vpn">Host — przy użyciu VPN</a>** wartością byłoby: `http://20.20.56.73:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
 5. Jeżeli hostujesz sesję w grze, zezwól na wszystkie połączenie (publiczne oraz prywatne), jeżeli Zapora sieciowa Windows wyświetli takie zapytanie.
 
 ## Uznania autorstwa
