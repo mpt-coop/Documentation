@@ -1,6 +1,6 @@
 # MPT — Modyfikacja umożliwiająca grę wieloosobową dla SPT
 
-<details>
+<details open>
 	<summary>Spis treści</summary>
 	<ol>
 		<li><a href="#czym-jest-mpt">Czym jest MPT?</a></li>
