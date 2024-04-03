@@ -3,26 +3,26 @@
 <details>
 	<summary>Spis treści</summary>
 	<ol>
-		<li><a href="#what-is-mpt">Czym jest MPT?</a></li>
-		<li><a href="#license">Licencja</a></li>
+		<li><a href="#czym-jest-mpt">Czym jest MPT?</a></li>
+		<li><a href="#licencja">Licencja</a></li>
 		<li>
-           	<a href="#prerequisites">Warunki wstępne</a>
+           	<a href="#warunki-wstępne">Warunki wstępne</a>
             <ul>
-                <li><a href="#hosting">Hostowanie</a></li>
-                <li><a href="#client">Klient</a></li>
+                <li><a href="#hostowanie">Hostowanie</a></li>
+                <li><a href="#klient">Klient</a></li>
             </ul>
         </li>
-        <li><a href="#hardware-requirements">Wymagania sprzętowe</a></li>
+        <li><a href="#wymagania-sprzętowe">Wymagania sprzętowe</a></li>
 		<li>
-	            <a href="#installation">Instalacja</a>
+	            <a href="#instalacja">Instalacja</a>
 	            <ul>
-	                <li><a href="#host-using-port-forwarding">Host — przy użyciu przekierowania portów</a></li>
-	                <li><a href="#host-using-a-vpn">Host — przy użyciu VPN</a></li>
-	                <li><a href="#client-using-port-forwarding">Klient — Przy użyciu przekierowania portów</a></li>
-	                <li><a href="#client-using-a-vpn">Klient — Przy użyciu VPN</a></li>
+	                <li><a href="#host--przy-użyciu-przekierowania-portów">Host — przy użyciu przekierowania portów</a></li>
+	                <li><a href="#host--przy-użyciu-vpn">Host — przy użyciu VPN</a></li>
+	                <li><a href="#klient--przy-użyciu-przekierowania-portów">Klient — Przy użyciu przekierowania portów</a></li>
+	                <li><a href="#klient--przy-użyciu-vpn">Klient — Przy użyciu VPN</a></li>
 	            </ul>
 	        </li>
-		<li><a href="#credits">Uznania autorstwa</a></li>
+		<li><a href="#uznania-autorstwa">Uznania autorstwa</a></li>
 	</ol>
 </details>
 
@@ -83,7 +83,7 @@ Największy wzrost w MPT (oraz w SPT ogółem) dają mocniejszy procesor oraz pa
 
 ### Host — przy użyciu przekierowania portów
 
-Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie porty podane w **<a href="#prerequisites">warunkach wstępnych</a>** zostały przekierowane. Nie otrzymasz od nas wsparcia przy przekierowaniu portów. Jeżeli nie masz dostępu do routera lub nie masz możliwości przekierowania portów, użyj VPN.
+Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie porty podane w **<a href="#warunki-wstępne">warunkach wstępnych</a>** zostały przekierowane. Nie otrzymasz od nas wsparcia przy przekierowaniu portów. Jeżeli nie masz dostępu do routera lub nie masz możliwości przekierowania portów, użyj VPN.
 
 **Konfiguracja Zapory sieciowej**
 
@@ -182,7 +182,7 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
-4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój publiczny adres IP (WAN). Używając przykładu opisanego w **<a href="#host-using-port-forwarding">Host — przy użyciu przekierowania portów</a>** wartością byłoby: `http://70.50.130.200:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
+4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój publiczny adres IP (WAN). Używając przykładu opisanego w **<a href="#host--przy-użyciu-przekierowania-portów">Host — przy użyciu przekierowania portów</a>** wartością byłoby: `http://70.50.130.200:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
 5. Jeżeli hostujesz sesję w grze, zezwól na wszystkie połączenie (publiczne oraz prywatne), jeżeli Zapora sieciowa Windows wyświetli takie zapytanie.
 
 ### Klient — Przy użyciu VPN
@@ -190,7 +190,7 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
-4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój adres IP serwera VPN. Używając przykładu opisanego w **<a href="#host-using-a-vpn">Host — przy użyciu VPN</a>** wartością byłoby: `http://20.20.56.73:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
+4. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój adres IP serwera VPN. Używając przykładu opisanego w **<a href="#host--przy-użyciu-vpn">Host — przy użyciu VPN</a>** wartością byłoby: `http://20.20.56.73:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL),
 5. Jeżeli hostujesz sesję w grze, zezwól na wszystkie połączenie (publiczne oraz prywatne), jeżeli Zapora sieciowa Windows wyświetli takie zapytanie.
 
 ## Uznania autorstwa
