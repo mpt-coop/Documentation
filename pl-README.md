@@ -48,7 +48,6 @@ MPT wymaga ogólnej wiedzy o komputerach, sieciach oraz Aki. Jeżeli nie czujesz
 ### Hostowanie
 
 - Router oraz dostawca internetu (ISP), który wspiera **przekierowanie portów** lub **UPnP**,
-- Router, który wspiera pętlę zwrotną NAT (funkcja **NAT Loopback**), jeżeli będzie to sieć lokalna/wewnętrzna,
 - Otwarty port **6969** dla serwera AKI,
 - Port UDP otwarty dla ruchu P2P, domyślnie **25565** (jeżeli zostanie użyte połączenie UPnP — warunek ten nie jest wymagany),
 - Zainstalowane oraz działające **SPT**, odpowiednie dla wybranej wersji **MPT**, która będzie używana,
@@ -87,93 +86,67 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 
 **Konfiguracja Zapory sieciowej**
 
-1. Przekierowanie portu 6969 TCP w swoim routerze (w obu kierunkach wejście/wyjście),
-2. Przekierowanie portu UDP, który będzie używany, w swoim routerze, domyślnie 25565 (w obu kierunkach wejście/wyjście),
-3. Gdy Windows wyświetli komunikat, zezwól na połączenie w swojej Zaporze sieciowej.
+1. Przekierowanie portu 6969 **TCP** w swoim routerze (w obu kierunkach wejście/wyjście),
+2. Przekierowanie portu **UDP**, który będzie używany, w swoim routerze, domyślnie 25565 (w obu kierunkach wejście/wyjście),
+3. Gdy Windows wyświetli komunikat, zezwól na ***wszystkie*** połączenia w swojej Zaporze sieciowej.
 
 **Konfiguracja Ogólna**
 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom jednorazowo `Aki.Server.exe` aby pozwolić mu wygenerować pliki konfiguracyjne dla MPT, a następnie go wyłącz,
-4. Znajdź swój publiczny adres IP (WAN), możesz użyć przykładowo: [ipv4.icanhazip.com](https://ipv4.icanhazip.com/),
-5. Przejdź do `user\mods\MPTCoop\config` i otwórz `coopConfig.json`,
-6. Zamień wartość `externalIP` na Twój adres IP WAN (lub adres serwera VPN, jeżeli go używasz), który znaleziony został w kroku 4, a następnie zapisz oraz zamknij plik,
+4. Wróć do głównego folderu, następnie przejdź do `Aki_Data\Server\configs` i otwórz plik `http.json`,
+5. Zmień wartość `ip` na `0.0.0.0`, a następnie zapisz i zamknij plik,
+6. Przejdź do `user\mods\mpt-server\assets\configs` i otwórz plik `mpt.json`,
+7. Zmień dowolne ustawienia według własnych preferencji:
+    - **useBtr**: czy BTR powinien pojawiać się podczas gry na mapie Streets of Tarkov,
+        - **friendlyFire**: czy sojusznicy powinni otrzymywać obrażenia spowodowane przez ich kolegów,
+        - **dynamicVExfils**: automatycznie skaluj maksymalną liczbę graczy dla wyjazdów pojazdami w zależności od liczby graczy w rajdzie,
+        - **allowFreeCam**: czy gracze mogą używać wolnej kamery (free cam),
+    - **giftedItemsLoseFIR**: czy przesyłane przedmioty powinny tracić status FiR
 
-    >💡 **Przykład:** sztuczny lokalny adres IP (WAN; **70.50.130.200**):
-    > ```json
-    > {
-    >     "protocol": "http",
-    >     "externalIP": "70.50.130.200"
-    > }
-    > ```
-7. Znajdź, jaki jest Twój lokalny adres IP (LAN). Otwórz `Wiersz poleceń` (Naciśnij start i wyszukaj `cmd` lub `Wiersz polecenia` i naciśnij klawisz Enter),
-   >✅ Poprawne uruchomienie powinno dawać podobny rezultat:
-   > 
-   >![image](https://github.com/mpt-coop/Documentation/assets/20912169/2b089bba-aac2-437e-9a6a-6620a4ba249b)
-
-8. Wewnątrz Wiersza poleceń wpisz `ipconfig` i naciśnij klawisz Enter. Twój lokalny adres IP (LAN) powinien wyświetlać się tak jak poniżej:
-   ```bat
-    Windows IP Configuration
-    
-    
-    Ethernet adapter Ethernet:
-    
-       Connection-specific DNS Suffix  . : home
-       IPv4 Address. . . . . . . . . . . : 192.168.1.120 <------ To jest Twój lokalny adres IP (LAN)
-       Subnet Mask . . . . . . . . . . . : 255.255.255.0
-       Default Gateway . . . . . . . . . : 192.168.1.1
-    ```
-9. Wróć do głównego katalogu i przejdź do `Aki_Data\Server\configs` a następnie otwórz `http.json`,
-10. Zmień wartość pola `ip` na Twój lokalny adres IP (LAN), a następnie zapisz i zamknij plik,
-
-    >💡 **Przykład:** sztuczny lokalny adres IP (LAN; **192.168.1.120**):
-    >```json
-    >{
-    >    "ip": "192.168.1.120",
-    >    "port": 6969,
-    >    "webSocketPingDelayMs": 90000,
-    >    "logRequests": true,
-    >    "serverImagePathOverride": {	}
-    >} 
+8. Uruchom `Aki.Server.exe` i poczekaj, aż zakończy się ładowanie,
+   >✅ Poprawne uruchomienie powinno wyglądać mniej więcej tak:
+   >```
+    >Started webserver at http://0.0.0.0:6969
+    >Started websocket at ws://0.0.0.0:6969
+    >Server is running, do not close while playing SPT, Happy playing!!
     >```
-11. Uruchom `Aki.Server.exe` i poczekaj chwilę, aż skończy się ładować,
+9. Uruchom `Aki.Launcher.exe`,
+10. Twoi znajomi mogą połączyć się z Twoim serwerem, korzystając z Twojego adresu IP WAN, który można znaleźć na przykład za pomocą strony [IPv4.ICanHazIP](https://ipv4.icanhazip.com/).
 
-    >✅ Poprawne uruchomienie powinno dawać podobny rezultat:
-    >
-    >![image](https://github.com/mpt-coop/Documentation/assets/20912169/fe46fb2d-4e90-4f54-b159-745a1561772a)
-
-12. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
-13. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój publiczny adres IP (WAN). Używając przykładu z kroku 6, wartością byłoby: `http://70.50.130.200:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL).
 
 ### Host — przy użyciu VPN
 
 1. Pobierz oraz zainstaluj najnowszą wersję MPT,
 2. Przejdź do katalogu, w którym znajduje się zainstalowany SPT i wypakuj zawartość pliku skompresowanego do tego katalogu,
 3. Uruchom jednorazowo `Aki.Server.exe` aby pozwolić mu wygenerować pliki konfiguracyjne dla MPT, a następnie go wyłącz,
-4. Przejdź do `user\mods\MPTCoop\config` i otwórz `coopConfig.json`,
-5. Zmień wartość `externalIP` na adres IP Twojego serwera VPN, a następnie zapisz i zamknij plik,
-
-    >```json
-    >{
-    >    "protocol": "http",
-    >    "externalIP": "20.20.56.73"
-    >}
-    >```
-6. Wróć do głównego katalogu i przejdź do `Aki_Data\Server\configs` a następnie otwórz `http.json`,
-7. Zmień wartość pola `ip` na Twój adres IP serwera VPN, a następnie zapisz i zamknij plik,
-
-    >💡 **Przykład:** sztuczny adres IP serwera VPN (VPN; **20.20.56.73**):
-    >```json
-    >{
-    >    "ip": "20.20.56.73",
-    >    "port": 6969,
-    >    "webSocketPingDelayMs": 90000,
-    >    "logRequests": true,
-    >    "serverImagePathOverride": {	}
-    >} 
-    >```
+4. Wróć do głównego folderu, następnie przejdź do `Aki_Data\Server\configs` i otwórz plik `http.json`,
+5. Zmień wartość `ip` na adres IP Twojego serwera VPN, a następnie zapisz i zamknij plik,
+   >💡 **Przykład:** sztuczny adres IP serwera VPN (VPN; **20.20.56.73**):
+   >```json
+   >{
+   >    "ip": "20.20.56.73",
+   >    "port": 6969,
+   >    "webSocketPingDelayMs": 90000,
+   >    "logRequests": true,
+   >    "serverImagePathOverride": {	}
+   >} 
+   >```
+6. Przejdź do `user\mods\mpt-server\assets\configs` i otwórz plik `mpt.json`,
+7. Zmień dowolne ustawienia według własnych preferencji:
+    - **useBtr**: czy BTR powinien pojawiać się podczas gry na mapie Streets of Tarkov,
+        - **friendlyFire**: czy sojusznicy powinni otrzymywać obrażenia spowodowane przez ich kolegów,
+        - **dynamicVExfils**: automatycznie skaluj maksymalną liczbę graczy dla wyjazdów pojazdami w zależności od liczby graczy w rajdzie,
+        - **allowFreeCam**: czy gracze mogą używać wolnej kamery (free cam),
+    - **giftedItemsLoseFIR**: czy przesyłane przedmioty powinny tracić status FiR
 8. Uruchom `Aki.Server.exe` i poczekaj chwilę, aż skończy się ładować,
+   >✅ Poprawne uruchomienie powinno wyglądać mniej więcej tak:
+   >```
+   >Started webserver at http://0.0.0.0:6969
+   >Started websocket at ws://0.0.0.0:6969
+   >Server is running, do not close while playing SPT, Happy playing!!
+   >```
 9. Uruchom `Aki.Launcher.exe` i naciśnij 'Settings',
 10. Zmień wartość w polu `URL` tak, aby odzwierciedlała Twój adres IP serwera VPN. Używając przykładu z kroku 5, wartością byłoby: `http://20.20.56.73:6969` (pamiętaj, aby usunąć jakiekolwiek slashe `/` na samym końcu URL).
 
@@ -197,7 +170,7 @@ Zanim rozpoczniesz wykonywanie poniższych kroków, upewnij się, że wszystkie 
 
 | **Projekt** | **Licencje i uznania**                                                                                                                                            |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aki.Modules | [NCSA](https://dev.sp-tarkov.com/SPT-AKI/Modules/src/branch/master/LICENSE.md) - Za oryginalne łatki, które są nadpisywane dla kompatybilności MPT                |
+| Aki.Modules | [NCSA](https://dev.sp-tarkov.com/SPT-AKI/Modules/src/branch/master/LICENSE.md) - (Za oryginalne łatki, które są nadpisywane dla kompatybilności MPT)              |
 | SIT         | Nielicencjonowane (MPT bazuje na commicie [9de30d8](https://github.com/stayintarkov/StayInTarkov.Client/blob/9de30d8bab1a4cd5e8bb7bcf5d32539098e97aa6/README.md)) |
-| Open.NAT    | [MIT](https://github.com/lontivero/Open.NAT/blob/master/LICENSE) - Za implementacje UPnP                                                                          |
-| LiteNetLib  | [MIT](https://github.com/RevenantX/LiteNetLib/blob/master/LICENSE.txt) - Za implementacje serwer/klient                                                           |
+| Open.NAT    | [MIT](https://github.com/lontivero/Open.NAT/blob/master/LICENSE) - (Za implementacje UPnP)                                                                        |
+| LiteNetLib  | [MIT](https://github.com/RevenantX/LiteNetLib/blob/master/LICENSE.txt) - (Za implementacje serwer/klient)                                                         |
